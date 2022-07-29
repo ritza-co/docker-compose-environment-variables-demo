@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  web:
+    environment:
+      - SECRET_ENV=${HOST_SECRET_ENV}
+    build: .
+    ports:
+      - "8000:5000"
+  redis:
+    image: "redis:alpine"
